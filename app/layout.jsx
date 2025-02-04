@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Themeprovider } from "@/components/ThemeProvider";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         <Footer/>
         </Themeprovider>
       </body>
+      <GoogleAnalytics gaId="G-WDRYCHJ93E" />
     </html>
   );
 }

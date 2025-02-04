@@ -1,7 +1,12 @@
 import Link from "next/link";
 import React from "react";
 
-import { RiArrowDownSLine, RiBriefcase4Fill, RiTeamFill, RiTodoFill } from "react-icons/ri";
+import {
+  RiArrowDownSLine,
+  RiBriefcase4Fill,
+  RiTeamFill,
+  RiTodoFill,
+} from "react-icons/ri";
 import { Button } from "./ui/button";
 import { Download, Send } from "lucide-react";
 import { Socials } from "./Socials";
@@ -19,8 +24,9 @@ const Hero = () => {
             </div>
             <h1 className="h1">Hello, my name is Abdulla</h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-              Brief description with insight into myself, my vocational journey,
-              and what i engange in professionally.
+              Self-taught web developer with a passion for building web
+              applications, excelling in problem-solving and rapidly learning
+              new technologies.
             </p>
 
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
@@ -29,9 +35,11 @@ const Hero = () => {
                   Contact me <Send size={18} />
                 </Button>
               </Link>
-              <Button variant="secondary" className="gap-x-2">
-                Download CV <Download size={18} />
-              </Button>
+              <a href="/Abdulla.pdf" download>
+                <Button variant="secondary" className="gap-x-2">
+                  Download CV <Download size={18} />
+                </Button>
+              </a>
             </div>
             <Socials
               containerStyles={"flex gap-x-6 mx-auto xl:mx-0"}
@@ -42,16 +50,19 @@ const Hero = () => {
           </div>
 
           <div className="hidden xl:flex relative w-[40%]">
-
             <Badge
-              containerStyles={"absolute top-[24%] lg:-left-[5rem] 2xl:-left-[2rem]"}
+              containerStyles={
+                "absolute top-[24%] lg:-left-[5rem] 2xl:-left-[2rem]"
+              }
               icon={<RiBriefcase4Fill />}
               endCountNum={3}
               badgeText={"Year Of Experience"}
             />
 
             <Badge
-              containerStyles={"absolute top-[80%] 2xl:-left-[0rem] lg:-left-[1rem]"}
+              containerStyles={
+                "absolute top-[80%] 2xl:-left-[0rem] lg:-left-[1rem]"
+              }
               icon={<RiTodoFill />}
               endCountNum={6}
               endCountText={"K"}
@@ -77,9 +88,9 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">
+        {/* <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">
           <RiArrowDownSLine className="text-3xl text-primary" />
-        </div>
+        </div> */}
       </div>
     </section>
   );

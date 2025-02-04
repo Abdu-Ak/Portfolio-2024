@@ -44,19 +44,19 @@ const qualificationData = [
     title: "education",
     data: [
       {
-        university: "Example University",
-        qualification: "Degree",
-        years: "2015 - 2022",
+        university: "Indira Gandhi National Open University (IGNOU)",
+        qualification: "Bachelor of Computer Applications",
+        years: "2024 - Present",
       },
       {
-        university: "Example University",
-        qualification: "Degree",
-        years: "2015 - 2022",
+        university: "Brototype, Calicut",
+        qualification: "MERN Stack Development",
+        years: "2022 - 2023",
       },
       {
-        university: "Example University",
-        qualification: "Degree",
-        years: "2015 - 2022",
+        university: "Govt Boys HSS, Manjeri",
+        qualification: "Higher Secondary",
+        years: "2020 – 2022",
       },
     ],
   },
@@ -64,19 +64,9 @@ const qualificationData = [
     title: "experience",
     data: [
       {
-        company: "Example Company",
-        role: "Engineer",
-        years: "2015 - 2022",
-      },
-      {
-        company: "Example Company",
-        role: "Engineer",
-        years: "2015 - 2022",
-      },
-      {
-        company: "Example Company",
-        role: "Engineer",
-        years: "2015 - 2022",
+        company: "Zaigo Infotech, Chennai",
+        role: "Junior Software Engineer",
+        years: "2023 - present",
       },
     ],
   },
@@ -169,12 +159,11 @@ const About = () => {
                 <TabsContent value="personal">
                   <div className="text-center xl:text-left">
                     <h3 className="h3 mb-4">
-                      Unmatched service quality for over 10 years
+                       Exceptional Results with Dedication and Skill
                     </h3>
                     <p className="subtitle max-w-xl mx-auto xl:mx-0">
-                      i specialize in crafting intuitive websites with
-                      cutting-edge technology, delivering dynamic and engaging
-                      user experince.
+                      Specializing in building intuitive websites with modern
+                      technology, creating dynamic and engaging user experiences
                     </p>
                     <div className="grid xl:grid-cols-2 gap-4 mb-12">
                       {infoData.map((item, index) => {
@@ -190,11 +179,11 @@ const About = () => {
                       })}
                     </div>
 
-                    <div className="flex flex-col gap-y-2">
+                    {/* <div className="flex flex-col gap-y-2">
                       <div>Language Skills</div>
                       <div className="border-b border-border"></div>
                       <div>English, Malayalam, Tamil</div>
-                    </div>
+                    </div> */}
                   </div>
                 </TabsContent>
                 <TabsContent value="qualification">
@@ -305,7 +294,7 @@ const About = () => {
 
                       <div className="flex gap-x-8 justify-center xl:justify-start">
                         {getData(skills, "tools").data.map((item, index) => {
-                          const { imgPath } = item;    
+                          const { imgPath } = item;
                           return (
                             <div key={index}>
                               <Image
